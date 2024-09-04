@@ -1,3 +1,4 @@
+
 <template>
     <div class="container-fluid">
         
@@ -10,7 +11,7 @@
         </div>
         
         <div class="d-flex justify-content-center mb-3">
-            <p class="text-center">SELAMAT DATANG DI TOKO ONLINE KAMI SEMOGA ANDA PUAS DENGAN PELAYANAN KAMI.</p>
+            <p class="text">SELAMAT DATANG DI TOKO ONLINE KAMI SEMOGA ANDA PUAS DENGAN PELAYANAN KAMI.</p>
         </div>
 
         <section id="produk">
@@ -33,19 +34,43 @@
         </div>
         <div class="row">
             <div v-for="(kategori, i) in kategoris" :key="i" class="col-lg-4 col-md-6 mb-3">
+                <nuxt-link to="../detail">
+                    
+                
                 <div class="card">
                     <img :src="kategori.cover" class="card-img-top" alt="Category Image" style="object-fit: cover;">
                     <div class="card-body">
-                        <p class="card-text">{{ kategori.nama }}</p>
+                        <div class="text">
+                            <p class="card-text">{{ kategori.nama }}</p>
+                        </div>
                     </div>
                 </div>
+            </nuxt-link>
+                
             </div>
         </div>
+        
     </section>
+    <div class="footer">
+            <p>Copyright © 2024 i, Inc. All rights reserved.</p>
+        </div>
     </div>
 </template>
 
 <style scoped>
+.footer {
+    text-align: center;
+    background-color:#D9D9D9;
+    height: 4em;
+}
+
+.text {
+    text-align: center;
+}
+
+.card-body {
+    background-color:#D9D9D9;
+}
 </style>
 
 <script setup>

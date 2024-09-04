@@ -1,11 +1,21 @@
 <template>
     <div class="container-fluid">
-         <navbar/> <!-- custom component -->
+         <Header v-if="!isHomePage" /> <!-- custom component -->
          <slot />  <!-- page akan mengisi pada bagian ini -->
     </div>
 </template>
 <style>
 .container-fluid{
-    background-color:#EBC6C6 ;
+    background-color:#FFFF ;
 }
 </style>
+
+<script>
+export default {
+    computed: {
+        isHomePage() {
+            return this.$route.name === "detail";
+        }
+    }
+}
+</script>
