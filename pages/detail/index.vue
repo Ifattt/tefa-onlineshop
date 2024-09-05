@@ -19,7 +19,7 @@ onMounted(() => {
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-1">
-        <a href="/" class="btn btn-primary mt-3">back</a>
+        <a href="/" class="btn btn-grey mt-3"><-</a>
       </div>
       <div class="col-sm-10">
         <h2 class="text-center mb-5 mt-5 fw-bold">DETAIL PESANAN</h2>

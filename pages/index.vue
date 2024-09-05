@@ -7,7 +7,7 @@
         </div>
         
         <div class="d-flex justify-content-center mb-3">
-            <img src="~/assets/img/logo1.jpeg" alt="Logo" class="rounded-circle" style="width: 100px;">
+            <img src="~/assets/img/logo2.png" alt="Logo" class="rounded-circle" style="width: 100px;">
         </div>
         
         <div class="d-flex justify-content-center mb-3">

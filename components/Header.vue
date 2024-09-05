@@ -8,7 +8,7 @@
         <a href="#produk">Produk Kami</a>
         <a href="#kategori">Kategori</a>
       </div>
-</nav>
+    </nav>
 </div>
 </template>
 
@@ -17,11 +17,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    background-color: #ffffff; 
+    z-index: 1000;
   }
 
-  .navigasi > a{
+  .navigasi > a {
     color: #000000;
     text-decoration: none;
-    margin-right: 10px
+    margin-right: 10px;
   }
 </style>
