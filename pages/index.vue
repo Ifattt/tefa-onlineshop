@@ -34,7 +34,7 @@
         </div>
         <div class="row">
             <div v-for="(kategori, i) in kategoris" :key="i" class="col-lg-4 col-md-6 mb-3">
-                <nuxt-link to="../detail">
+                <nuxt-link :to="`/detail/${kategori.id}`">
                     
                 
                 <div class="card">
