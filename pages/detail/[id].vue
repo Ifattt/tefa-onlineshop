@@ -11,11 +11,16 @@
       <div class="col-md-3">
         <img :src="detail.cover" class="cover" alt="cover" style="height: 400px;">
       </div>
-      <div class="col-md-6">
+    
         <ul class="list-group list-grup-flush">
-          <li class="list-group-item">Deskripsi : {{ detail.deskripsi }}</li>
-    </ul>
-  </div>
+          <li class="list-group-item"> {{ detail.judul }}</li>
+          <li class="list-group-item"> Deskripsi : </li>
+          <li class="list-group-item"> {{ detail.deskripsi }}</li>
+          <li class="list-group-item"> {{ detail.deskripsi2 }}</li>
+          <li class="list-group-item"> {{ detail.deskripsi3 }}</li>
+          <li class="list-group-item"> {{ detail.deskripsi4 }}</li>
+        </ul>
+      
 
         <!-- <div class="flex-container">
           <div class="col-lg-2">
@@ -70,6 +75,11 @@ definePageMeta ({
     width: 235px;
 }
 ul {
-  width: 20%;
+  width: 50%;
+}
+.footer {
+    text-align: center;
+    background-color:#D9D9D9;
+    height: 4em;
 }
 </style>
