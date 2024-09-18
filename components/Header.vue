@@ -27,6 +27,6 @@
   .navigasi > a {
     color: #000000;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 40px;
   }
 </style>

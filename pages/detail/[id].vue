@@ -1,44 +1,52 @@
 <template>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-1">
-          <a href="/" class="btn btn-grey mt-3"><-</a>
-        </div>
-        <div class="col-sm-10">
-          <h2 class="text-center mb-5 mt-5 fw-bold">DETAIL PESANAN</h2>
+  <div>
+    <div class="row">
+      <div class="col-lg-1">
+        <a href="/" class="btn btn-grey mt-3">
+          <button style="background-color: transparent; border: none; ">
+            <img src="~/assets/img/kembali.png" alt="kembali" style="width: 30px; height: 30px;">
+          </button></a>
       </div>
-      <hr>
-      <div class="col-md-3">
-        <img :src="detail.cover" class="cover" alt="cover" style="height: 400px;">
+    </div>
+    <div class="row">
+      <div class="col-sm-12 justify-content-center">
+        <h2 class="text-center mb-5 mt-5 fw-bold">DETAIL PESANAN</h2>
       </div>
-    
-        <ul class="list-group list-grup-flush">
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-4">
+        <img :src="detail.cover" class="cover img-fluid" alt="cover">
+      </div>
+      <div class="col">
+        <ul class="list-group list-group-flush">
           <li class="list-group-item"> {{ detail.judul }}</li>
           <li class="list-group-item"> Deskripsi : </li>
           <li class="list-group-item"> {{ detail.deskripsi }}</li>
           <li class="list-group-item"> {{ detail.deskripsi2 }}</li>
           <li class="list-group-item"> {{ detail.deskripsi3 }}</li>
           <li class="list-group-item"> {{ detail.deskripsi4 }}</li>
+          <li class="list-group-item"> {{ detail.deskripsi5 }}</li>
         </ul>
-      
-
-        <!-- <div class="flex-container">
-          <div class="col-lg-2">
-            <span v-if="loading">Sedang memuat gambar...</span>
-            <span v-else><img :src="detail.cover" alt="cover" class="cover" /></span>
-          </div>
-          <div v-if="loading">Sedang memuat data...</div>
-          <div v-else>
-            <h1>{{ detail.deskripsi }}</h1>
-            <button type="button" class="btn btn-secondary" disabled>order </button>
-          </div>
-        </div> -->
+        <NuxtLink class="btn bg-abu btn-lg rounded-5"
+          to="https://wa.me/6285724948649?text=Halo%20saya%20ingin%20pesan%20bouquet" target="_blank">
+          <!-- <button style="background-color: transparent; border: none; "> -->
+          <img src="~/assets/img/whatsapp.png" alt="whatsapp" style="width: 30px; height: 30px;">
+          Order Disini
+          <!-- </button> -->
+        </NuxtLink>
       </div>
     </div>
-    <div class="footer">
-              <p>Copyright © 2024 i, Inc. All rights reserved.</p>
-          </div>
-  </template>
+  </div>
+  <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
+  <div>
+    <div>
+
+    </div>
+  </div>
+
+
+</template>
 
 
 <script setup>
@@ -52,34 +60,52 @@ const route = useRoute()
 const detail = ref([])
 
 const getDetailById = async () => {
-    const { data, error } = await supabase.from('detail').select(`*`)
+  const { data, error } = await supabase.from('detail').select(`*`)
     .eq('id', route.params.id)
-    if(data) detail.value = data[0]
+  if (data) detail.value = data[0]
 }
 onMounted(() => {
-    getDetailById()
+  getDetailById()
 })
-definePageMeta ({
-    layout: 'homepage'
+definePageMeta({
+  layout: 'homepage'
 })
 </script>
 
 <style scoped>
 .cover {
-    height: 430px;
-    width: 340px;
+  width: 340px;
 }
+
 .card.mb-8 {
-    margin-top: 50px;
-    height: 340px;
-    width: 235px;
+  margin-top: 50px;
+  height: 340px;
+  width: 235px;
 }
+
 ul {
   width: 50%;
 }
-.footer {
-    text-align: center;
-    background-color:#D9D9D9;
-    height: 4em;
+
+/* .container-fluid {
+  height: 90vh;
+} */
+
+.btn-order {
+  position: relative;
+}
+
+.btn-order .btn-float {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.list-group .list-group-item {
+  font-size: 0.9rem !important;
+}
+
+.list-group {
+  width: 100% !important;
 }
 </style>

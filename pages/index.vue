@@ -15,7 +15,7 @@
         </div>
 
         <section id="produk">
-        <div class="d-flex justify-content-center mb-3">
+        <div class="d-flex justify-content-center mb-6">
             <h1>PRODUK KAMI</h1>
         </div>
         <div class="row mb-3">
@@ -51,27 +51,10 @@
         </div>
         
     </section>
-    <div class="footer">
-            <p>Copyright © 2024 i, Inc. All rights reserved.</p>
-        </div>
     </div>
 </template>
 
-<style scoped>
-.footer {
-    text-align: center;
-    background-color:#D9D9D9;
-    height: 4em;
-}
 
-.text {
-    text-align: center;
-}
-
-.card-body {
-    background-color:#D9D9D9;
-}
-</style>
 
 <script setup>
 const supabase = useSupabaseClient();
