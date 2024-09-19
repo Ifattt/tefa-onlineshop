@@ -19,14 +19,14 @@
         <img :src="detail.cover" class="cover img-fluid" alt="cover">
       </div>
       <div class="col">
-        <ul class="list-group list-group-flush">
+        <ul class="">
           <li class="list-group-item"> {{ detail.judul }}</li>
           <li class="list-group-item"> Deskripsi : </li>
-          <li class="list-group-item"> {{ detail.deskripsi }}</li>
-          <li class="list-group-item"> {{ detail.deskripsi2 }}</li>
+          <li class="list-group-item deskripsi"> {{ detail.deskripsi }}</li>
+          <!-- <li class="list-group-item"> {{ detail.deskripsi2 }}</li>
           <li class="list-group-item"> {{ detail.deskripsi3 }}</li>
           <li class="list-group-item"> {{ detail.deskripsi4 }}</li>
-          <li class="list-group-item"> {{ detail.deskripsi5 }}</li>
+          <li class="list-group-item"> {{ detail.deskripsi5 }}</li> -->
         </ul>
         <NuxtLink class="btn bg-abu btn-lg rounded-5"
           to="https://wa.me/6285724948649?text=Halo%20saya%20ingin%20pesan%20bouquet" target="_blank">
@@ -73,6 +73,9 @@ definePageMeta({
 </script>
 
 <style scoped>
+.deskripsi {
+ white-space: pre-line ;
+}
 .cover {
   width: 340px;
 }
@@ -101,11 +104,32 @@ ul {
   bottom: 0;
 }
 
-.list-group .list-group-item {
-  font-size: 0.9rem !important;
+.list-group-item {
+  font-size: 1.5rem !important;
+  width: 100%;
 }
 
 .list-group {
   width: 100% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .list-group-item {
+  font-size: 10px !important;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
 }
 </style>

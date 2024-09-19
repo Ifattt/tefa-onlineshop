@@ -1,8 +1,7 @@
 <template>
     <div class="container-fluid">
         <slot />
-        <Footer />
-        <Hubungi />
+        <footer />
     </div>
 </template>
 

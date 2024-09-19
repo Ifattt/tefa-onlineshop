@@ -1,13 +1,14 @@
 <template>
-    <div class="container-fluid">
+    <!-- <div class="container-fluid"> -->
          <Header /> <!-- custom component -->
          <slot />  <!-- page akan mengisi pada bagian ini -->
          <Footer />
-</div>
+<!-- </div> -->
 </template>
 <style>
 .container-fluid{
     background-color:#FFFF ;
+    width: 100vw;
 }
 
 a {
