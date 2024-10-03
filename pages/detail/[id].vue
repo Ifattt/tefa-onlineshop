@@ -4,7 +4,7 @@
       <div class="col-lg-1">
         <a href="/" class="btn btn-grey mt-3">
           <button style="background-color: transparent; border: none; ">
-            <img src="~/assets/img/kembali.png" alt="kembali" style="width: 30px; height: 30px;">
+            <img src="~/assets/img/kembali.png" alt="kembali" style="width: 30px; height: 30px; margin-top: 10px;">
           </button></a>
       </div>
     </div>
@@ -15,11 +15,11 @@
     </div>
     <hr>
     <div class="row">
-      <div class="col-4">
+      <div class="col-sm-3">
         <img :src="detail.cover" class="cover img-fluid" alt="cover">
       </div>
       <div class="col">
-        <ul class="">
+        <ul class="row">
           <li class="list-group-item"> {{ detail.judul }}</li>
           <li class="list-group-item"> Deskripsi : </li>
           <li class="list-group-item deskripsi"> {{ detail.deskripsi }}</li>
@@ -29,7 +29,7 @@
           <li class="list-group-item"> {{ detail.deskripsi5 }}</li> -->
         </ul>
         <NuxtLink class="btn bg-abu btn-lg rounded-5"
-          to="https://wa.me/6285724948649?text=Halo%20saya%20ingin%20pesan%20bouquet" target="_blank">
+          :to="`https://wa.me/6285724948649?text=Halo saya ingin pesan bouquet: ${detail.judul}. https://onlinebouket.com/detail/${detail.id}`" target="_blank">
           <!-- <button style="background-color: transparent; border: none; "> -->
           <img src="~/assets/img/whatsapp.png" alt="whatsapp" style="width: 30px; height: 30px;">
           Order Disini
@@ -54,6 +54,20 @@ definePageMeta({
   layout: 'homepage'
 })
 
+useHead({
+  title: `Detail Bouquet`,
+  meta: [
+    {
+      name: 'description',
+      content: `jual bouket: ....`
+    },
+    {
+      property: 'og:image',
+      content: '.....'
+    }
+  ]
+})
+
 const supabase = useSupabaseClient()
 
 const route = useRoute()
@@ -74,62 +88,42 @@ definePageMeta({
 
 <style scoped>
 .deskripsi {
- white-space: pre-line ;
+  white-space: pre-line;
+  margin: 20px 10px;
+  height: auto; 
+  border-radius: 1rem;
 }
 .cover {
-  width: 340px;
+  width: 100%; 
+  max-width: 340px;
+  border-radius: 1rem;
+  margin: 20px 0; 
 }
 
 .card.mb-8 {
   margin-top: 50px;
-  height: 340px;
-  width: 235px;
+  height: auto; 
+  width: 100%; 
 }
 
 ul {
-  width: 50%;
-}
-
-/* .container-fluid {
-  height: 90vh;
-} */
-
-.btn-order {
-  position: relative;
-}
-
-.btn-order .btn-float {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.list-group-item {
-  font-size: 1.5rem !important;
   width: 100%;
 }
 
+.list-group-item {
+  font-size: 1.2rem; 
+  width: 100%;
+  margin: 15px 0;
+}
+
 .list-group {
-  width: 100% !important;
+  width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {          
   .list-group-item {
-  font-size: 10px !important;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.col {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-}
-
+    font-size: 1rem; 
+  }
 }
 </style>

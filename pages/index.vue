@@ -15,11 +15,11 @@
         </div>
 
         <section id="produk">
-        <div class="d-flex justify-content-center mb-6">
+        <div class="d-flex justify-content-center mb-3">
             <h1>PRODUK KAMI</h1>
         </div>
         <div class="row mb-3">
-            <div v-for="(produk, i) in produks" :key="i" class="col-lg-4 mb-3">
+            <div v-for="(produk, i) in produks" :key="i" class="col-lg-4 col-md-6 mb-3">
                 <div class="card">
                     <img :src="produk.cover" class="card-img-top" alt="Product 1" style="object-fit: cover;">
                 </div>
@@ -35,8 +35,7 @@
         <div class="row">
             <div v-for="(kategori, i) in kategoris" :key="i" class="col-lg-4 col-md-6 mb-3">
                 <nuxt-link :to="`/detail/${kategori.id}`">
-                    
-                
+                                   
                 <div class="card">
                     <img :src="kategori.cover" class="card-img-top" alt="Category Image" style="object-fit: cover;">
                     <div class="card-body">
@@ -57,6 +56,22 @@
 
 
 <script setup>
+useHead({
+  title: `Home`,
+  meta: [
+    {
+      name: 'description',
+      content: `jual bouket: ....`
+    },
+    {
+      property: 'og:image',
+      content: '.....'
+    }
+  ]
+})
+
+
+
 const supabase = useSupabaseClient();
 const produks = ref([]);
 const kategoris = ref([]);

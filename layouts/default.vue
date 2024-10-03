@@ -1,9 +1,9 @@
 <template>
-    <!-- <div class="container-fluid"> -->
+    <div class="container-fluid p-0">
          <Header /> <!-- custom component -->
          <slot />  <!-- page akan mengisi pada bagian ini -->
          <Footer />
-<!-- </div> -->
+</div>
 </template>
 <style>
 .container-fluid{

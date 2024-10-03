@@ -1,6 +1,6 @@
 <template>
-<div class="container-fluid">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div class="container-fluid p-0">
+    <nav class="navbar bg-white navbar-expand-lg bg-body-tertiary">
       <div class="logo">
         <a class="navbar-brand font-bold" href="#"><b>Tita Bouquet</b></a>
       </div>
@@ -20,7 +20,7 @@
     position:fixed;
     top: 0; 
     width: 100%;
-    background-color: #ffffff; 
+    /* background-color: #ffffff;  */
     z-index: 1000;
   }
 
