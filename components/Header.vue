@@ -1,9 +1,7 @@
 <template>
 <div class="container-fluid p-0">
     <nav class="navbar bg-white navbar-expand-lg bg-body-tertiary">
-      <div class="logo">
         <a class="navbar-brand font-bold" href="#"><b>Tita Bouquet</b></a>
-      </div>
       <div class="navigasi">
         <a href="#produk">Produk Kami</a>
         <a href="#kategori">Kategori</a>
@@ -19,8 +17,7 @@
     align-items: center;
     position:fixed;
     top: 0; 
-    width: 100%;
-    /* background-color: #ffffff;  */
+    width: 100%; 
     z-index: 1000;
   }
 
