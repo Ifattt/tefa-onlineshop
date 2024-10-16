@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
          <Header /> <!-- custom component -->
          <slot />  <!-- page akan mengisi pada bagian ini -->
          <Footer />
@@ -8,7 +8,7 @@
 <style>
 .container-fluid{
     background-color:#FFFF ;
-    width: 100vw;
+    
 }
 
 a {

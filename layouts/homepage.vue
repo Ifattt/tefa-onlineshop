@@ -1,7 +1,6 @@
 <template>
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
         <slot />
-        <footer />
     </div>
 </template>
 
