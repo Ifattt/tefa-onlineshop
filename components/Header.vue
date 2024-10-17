@@ -20,7 +20,6 @@
     width: 100%; 
     z-index: 1000;
     margin-right: 40px;
-    margin-bottom: 50px;
   }
 
   .navigasi > a {
