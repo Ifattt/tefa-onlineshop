@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid ">
+<div class="container-fluid">
     <nav class="navbar bg-white navbar-expand-lg bg-body-tertiary">
         <a class="navbar-brand font-bold" href="#"><b>Tita Bouquet</b></a>
       <div class="navigasi">
@@ -20,6 +20,7 @@
     width: 100%; 
     z-index: 1000;
     margin-right: 40px;
+    margin-bottom: 50px;
   }
 
   .navigasi > a {

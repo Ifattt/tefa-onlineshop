@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div>
          <Header /> <!-- custom component -->
          <slot />  <!-- page akan mengisi pada bagian ini -->
          <Footer />
